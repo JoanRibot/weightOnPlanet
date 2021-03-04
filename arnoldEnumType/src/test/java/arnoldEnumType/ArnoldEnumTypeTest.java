@@ -22,26 +22,26 @@ public class ArnoldEnumTypeTest {
 	}
 	
 
-	// @Test
-	// public void PlanetaConstructorTest() {
-	// 	// voy a asegurarme de que los metodos de los Enum Types
-	// 	// se comportan como yo espero
-	// 	Planeta planeta = Planeta.MERCURY;
-	// 	assertThat(planeta).isInstanceOf(Planeta.class);
-	// 	assertThat(planeta.ordinal()).isEqualTo(0);
-	// 	assertThat(planeta.name()).isEqualToIgnoringWhitespace("MERCURY");
-	// 	assertThat(Planeta.valueOf(planeta.name())).isEqualTo(Planeta.MERCURY);
-	// 	assertThat(planeta.compareTo(planeta.MERCURY)).isEqualTo(0);
-	// 	assertThat(planeta.toString()).isEqualToIgnoringWhitespace("MERCURY");
-	// 	assertThat(planeta.equals(planeta.MERCURY)).isEqualTo(true);
-	// 	assertThat(Planeta.values()[0]).isEqualTo(planeta);
-	// }
+	@Test
+	public void PlanetaConstructorTest() {
+		// voy a asegurarme de que los metodos de los Enum Types
+		// se comportan como yo espero
+		Planeta planeta = Planeta.MERCURY;
+		assertThat(planeta).isInstanceOf(Planeta.class);
+		assertThat(planeta.ordinal()).isEqualTo(0);
+		assertThat(planeta.name()).isEqualToIgnoringWhitespace("MERCURY");
+		assertThat(Planeta.valueOf(planeta.name())).isEqualTo(Planeta.MERCURY);
+		assertThat(planeta.compareTo(planeta.MERCURY)).isEqualTo(0);
+		assertThat(planeta.toString()).isEqualToIgnoringWhitespace("MERCURY");
+		assertThat(planeta.equals(planeta.MERCURY)).isEqualTo(true);
+		assertThat(Planeta.values()[0]).isEqualTo(planeta);
+	}
 	
-	// @Test
-	// public void PlanetaGetMasaTest(){		
-	// 	Planeta planeta = Planeta.MERCURY;
-	// 	assertThat(planeta.getMasa()).isEqualTo(3.303e+23);
-	// }
+	@Test
+	public void PlanetaGetMasaTest(){		
+		Planeta planeta = Planeta.MERCURY;
+		assertThat(planeta.getMasa()).isEqualTo(3.303e+23);
+	}
 	
 	// @Test
 	// public void PlanetaGetRadioTest(){		
