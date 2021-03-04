@@ -49,12 +49,12 @@ public class ArnoldEnumTypeTest {
 		assertThat(planeta.getRadio()).isEqualTo(2.4397e+6);
 	}	
 	
-	// @Test
-	// public void PlanetaNamesIteratorTest(){
-	// 	for(Planeta planeta : Planeta.values()){
-	// 		assertThat(planeta.name()).isIn(planetas);
-	// 	}
-	// }
+	@Test
+	public void PlanetaNamesIteratorTest(){
+		for(Planeta planeta : Planeta.values()){
+			assertThat(planeta.name()).isIn(planetas);
+		}
+	}
 	
 	// @Test
 	// public void PesoSuperficieMercurioTest(){
