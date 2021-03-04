@@ -24,11 +24,21 @@ public enum Planeta {
         return this.masa;
     }
 
-
     public double getRadio() {
         return this.radio;
     }
 
+    public double pesoSuperficie(double pesoHumano){
+        return 0d;
+    }
 
+    public double tu_masa(double pesoHumano){
+        double masaHumana = pesoHumano / gravedadSuperficialTierra();
+        return masaHumana;
+    }
     
+    public double gravedadSuperficialTierra(){
+        double gravedadTierra = G * Planeta.EARTH.getMasa()/ Planeta.EARTH.getRadio();
+        return gravedadTierra;
+    }
 }
