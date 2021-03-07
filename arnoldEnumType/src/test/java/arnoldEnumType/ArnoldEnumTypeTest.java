@@ -80,24 +80,24 @@ public class ArnoldEnumTypeTest {
 		}		
 	}
 	
-	// @Test
-	// public void ArrayGigantesGaseosos(){
+	@Test
+	public void ArrayGigantesGaseosos(){
 
-	// 	String[] gigantesGaseosos = new String[4];
-	// 	int planetasIncluidos = 0;
+		String[] gigantesGaseosos = new String[4];
+		int planetasIncluidos = 0;
 		
-	// 	byte index = 0;
-	// 	for(int i=Planeta.JUPITER.ordinal(); i<=Planeta.NEPTUNE.ordinal(); i++){
-	// 		gigantesGaseosos[index] = Planeta.values()[i].name();
-	// 		planetasIncluidos += 1;
-	// 		index += 1;
-	// 	}
-	// 	assertThat(planetasIncluidos).isEqualTo(4);
+		byte index = 0;
+		for(int i=Planeta.JUPITER.ordinal(); i<=Planeta.NEPTUNE.ordinal(); i++){
+			gigantesGaseosos[index] = Planeta.values()[i].name();
+			planetasIncluidos += 1;
+			index += 1;
+		}
+		assertThat(planetasIncluidos).isEqualTo(4);
 		
-	// 	for(Planeta planeta : Planeta.getGigantesGaseosos()){
-	// 		assertThat(planeta.name()).isIn(gigantesGaseosos);
-	// 	}		
-	// }
+		for(Planeta planeta : Planeta.getGigantesGaseosos()){
+			assertThat(planeta.name()).isIn(gigantesGaseosos);
+		}		
+	}
 	
 
 }
