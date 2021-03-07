@@ -63,22 +63,22 @@ public class ArnoldEnumTypeTest {
 		assertEquals(66.107583, planeta.MERCURY.pesoSuperficie(pesoHumano) , 0.001);
 	}
 	
-	// @Test
-	// public void ArrayPlanetasTerrestresTest(){
+	@Test
+	public void ArrayPlanetasTerrestresTest(){
 
-	// 	String[] planetasTerrestres = new String[4];
-	// 	int planetasIncluidos = 0;
+		String[] planetasTerrestres = new String[4];
+		int planetasIncluidos = 0;
 		
-	// 	for(int i=Planeta.MERCURY.ordinal(); i<Planeta.JUPITER.ordinal(); i++){
-	// 		planetasTerrestres[i] = Planeta.values()[i].name();
-	// 		planetasIncluidos += 1;
-	// 	}
-	// 	assertThat(planetasIncluidos).isEqualTo(4);
+		for(int i=Planeta.MERCURY.ordinal(); i<Planeta.JUPITER.ordinal(); i++){
+			planetasTerrestres[i] = Planeta.values()[i].name();
+			planetasIncluidos += 1;
+		}
+		assertThat(planetasIncluidos).isEqualTo(4);
 		
-	// 	for(Planeta planeta : Planeta.getPlanetasTerrestres()){
-	// 		assertThat(planeta.name()).isIn(planetasTerrestres);
-	// 	}		
-	// }
+		for(Planeta planeta : Planeta.getPlanetasTerrestres()){
+			assertThat(planeta.name()).isIn(planetasTerrestres);
+		}		
+	}
 	
 	// @Test
 	// public void ArrayGigantesGaseosos(){
