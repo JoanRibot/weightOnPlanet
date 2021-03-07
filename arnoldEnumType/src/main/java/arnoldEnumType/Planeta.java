@@ -29,16 +29,24 @@ public enum Planeta {
     }
 
     public double pesoSuperficie(double pesoHumano){
-        return 0d;
+        double pesoSuperficie = tuMasa(pesoHumano) * gravedadEnSuperficie();
+        return pesoSuperficie;
     }
 
-    public double tu_masa(double pesoHumano){
-        double masaHumana = pesoHumano / gravedadSuperficialTierra();
+    public double tuMasa(double pesoHumano){
+        double masaHumana = pesoHumano / gravedadEnSuperficieTierra();
         return masaHumana;
     }
-    
-    public double gravedadSuperficialTierra(){
-        double gravedadTierra = G * Planeta.EARTH.getMasa()/ Planeta.EARTH.getRadio();
-        return gravedadTierra;
+
+    public double gravedadEnSuperficie() {
+        double radioCuadrado = getRadio() * getRadio();
+        double gravedadPlaneta = G * getMasa() / radioCuadrado;
+        return gravedadPlaneta;
+    }
+
+    public double gravedadEnSuperficieTierra() {
+        double radioCuadrado = EARTH.getRadio() * EARTH.getRadio();
+        double gravedadPlaneta = G * EARTH.getMasa() / radioCuadrado;
+        return gravedadPlaneta;
     }
 }
